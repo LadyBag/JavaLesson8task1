@@ -51,6 +51,14 @@
                             <goal>check</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <!-- id (придумываем сами) -->
+                        <id>report</id>
+                        <goals>
+                            <!-- какую цель выполняем (берём из справки) -->
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
                     <rules>
