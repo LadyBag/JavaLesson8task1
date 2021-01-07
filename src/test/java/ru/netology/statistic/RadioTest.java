@@ -102,8 +102,25 @@ class RadioTest {
         int maxStationNumber = 50;
         Radio radio = new Radio(maxStationNumber);
         int expected = maxStationNumber;
-
-
         assertEquals(expected, radio.getMaxStationNumber());
     }
+    @Test
+    void currentStationNumberOutOfRangeMax() {
+
+        Radio radio = new Radio();
+        radio.setCurrentStationNumber(30);
+        int expected = 0;
+        assertEquals(expected, radio.getCurrentStationNumber());
+
+    }
+
+    @Test
+    void currentStationNumberOutOfRangeMin() {
+        Radio radio = new Radio();
+        radio.setCurrentStationNumber(-1);
+        int expected = 0;
+        assertEquals(expected, radio.getCurrentStationNumber());
+
+    }
+
 }
