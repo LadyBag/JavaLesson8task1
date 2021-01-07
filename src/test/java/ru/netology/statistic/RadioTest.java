@@ -65,9 +65,9 @@ class RadioTest {
     @Test
     void plusVolumeMax() {
         Radio radio = new Radio();
-        int expected = 10;
+        int expected = 100;
 
-        radio.setSoundVolume(10);
+        radio.setSoundVolume(100);
         radio.plusVolume();
 
         assertEquals(expected, radio.getSoundVolume());
@@ -94,5 +94,16 @@ class RadioTest {
         radio.minusVolume();
 
         assertEquals(expected, radio.getSoundVolume());
+    }
+
+    @Test
+    void shouldUseConstructor() {
+
+        int maxStationNumber = 50;
+        Radio radio = new Radio(maxStationNumber);
+        int expected = maxStationNumber;
+
+
+        assertEquals(expected, radio.getMaxStationNumber());
     }
 }
